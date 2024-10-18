@@ -34,10 +34,10 @@ export default function ChatView() {
         messages.insertLast({ userName, text: value, userColorIndex });
       }} />
       <div>
-        Connected as: {userName} {messages.value.length}
+        Connected as: {userName}
       </div>
       <div>
-        {messages.value.length && messages.value[messages.value.length - 1].value.userName === userName &&
+        {(messages.value.length > 0 && messages.value[messages.value.length - 1].value.userName === userName) ??
           <Button onClick={() => messages.remove(messages.value[messages.value.length - 1])}>Delete last message</Button>
         }
       </div>
