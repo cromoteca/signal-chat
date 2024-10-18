@@ -37,7 +37,7 @@ export default function ChatView() {
         Connected as: {userName} {messages.value.length}
       </div>
       <div>
-      {messages.value.length && messages.value[messages.value.length - 1].value.userName === userName &&
+        {messages.value.length && messages.value[messages.value.length - 1].value.userName === userName &&
           <Button onClick={() => messages.remove(messages.value[messages.value.length - 1])}>Delete last message</Button>
         }
       </div>
