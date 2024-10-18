@@ -37,8 +37,8 @@ export default function ChatView() {
         Connected as: {userName}
       </div>
       <div>
-        {(messages.value.length > 0 && messages.value[messages.value.length - 1].value.userName === userName) ??
-          <Button onClick={() => messages.remove(messages.value[messages.value.length - 1])}>Delete last message</Button>
+        {(messages.value.length > 0 && messages.value[messages.value.length - 1].value.userName === userName) ?
+          <Button onClick={() => messages.remove(messages.value[messages.value.length - 1])}>Delete last message</Button> : null
         }
       </div>
     </div>
